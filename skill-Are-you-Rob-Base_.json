@@ -1,0 +1,171 @@
+{
+  "name": "test",
+  "intents": [
+    {
+      "intent": "Yes",
+      "examples": [
+        {
+          "text": "yes"
+        },
+        {
+          "text": "yea"
+        },
+        {
+          "text": "uh huh"
+        },
+        {
+          "text": "si"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "No",
+      "examples": [
+        {
+          "text": "naw"
+        },
+        {
+          "text": "negative"
+        },
+        {
+          "text": "nope"
+        },
+        {
+          "text": "no"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Next question - internationally known",
+      "output": {
+        "text": {
+          "values": [
+            "Are you internationally known?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1542816056147",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_3_1542816196005"
+    },
+    {
+      "type": "standard",
+      "title": "Next question - rock a microphone",
+      "output": {
+        "text": {
+          "values": [
+            "Are you known to rock a microphone?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_3_1542816196005",
+      "metadata": {},
+      "conditions": "#No",
+      "dialog_node": "node_6_1542816568814"
+    },
+    {
+      "type": "standard",
+      "title": "You are Rob base!",
+      "output": {
+        "text": {
+          "values": [
+            "Congratulations! You are Rob Base. https://www.youtube.com/watch?v=phOW-CZJWT0"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1542816568814",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_5_1542816321834"
+    },
+    {
+      "type": "standard",
+      "title": "Next question - come to get down",
+      "output": {
+        "text": {
+          "values": [
+            "Did you come to get down?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1543031591699",
+      "metadata": {},
+      "conditions": "#Yes",
+      "dialog_node": "node_1_1542816056147"
+    },
+    {
+      "type": "standard",
+      "title": "Next question - rock right now",
+      "output": {
+        "text": {
+          "values": [
+            "Do you wanna rock right now? "
+          ],
+          "selection_policy": "sequential"
+        },
+        "custom": {
+          "showImage": true
+        }
+      },
+      "metadata": {},
+      "conditions": "#Yes",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1543031591699",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "You are not Rob Base",
+      "output": {
+        "text": {
+          "values": [
+            "You are not Rob Base!"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1543031591699"
+    },
+    {
+      "type": "standard",
+      "title": "Intro",
+      "output": {
+        "text": {
+          "values": [
+            "Welcome to \"Are you Rob Base?\". Based on this flow chart: http://lemmondsdesign.com/flow-charts-101/ Would you like to start?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "metadata": {},
+      "conditions": "welcome || \"\"",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "a3e654ff-c1c6-4add-a100-c831c4c74008",
+  "counterexamples": [],
+  "learning_opt_out": false,
+  "status": "Available"
+}
