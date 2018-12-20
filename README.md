@@ -27,6 +27,7 @@ SKILL_ID=<skill_id>
 ```
 
 That's it you should have a functioning chatbot!
+
 ![Rob Base Chat](https://thepracticaldev.s3.amazonaws.com/i/asdfsowfu6jilkizuudc.gif)
 
 ## Rob Base - It takes two
