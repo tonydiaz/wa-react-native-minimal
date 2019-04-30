@@ -1,11 +1,14 @@
 {
   "expo": {
-    "name": "wa-react-native-minimal",
+    "name": "are-you-rob-base",
     "description": "This project is chatbot for the `Are you Rob Base?` flowchart. It uses Watson Assistant to handle the dialog",
-    "slug": "wa-react-native-minimal",
+    "slug": "are-you-rob-base",
     "privacy": "public",
     "sdkVersion": "31.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,6 +25,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "githubUrl": "https://github.com/tonydiaz/wa-react-native-minimal"
   }
 }
